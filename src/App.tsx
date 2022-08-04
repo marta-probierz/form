@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
+import { paths } from "./config/paths";
+import { FormPage, AddContractorPage, NotFoundPage } from "./pages";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, lightTheme, darkTheme } from "./styles";
 
@@ -28,6 +31,11 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
+      <Routes>
+        <Route path={paths.home} element={<FormPage />} />
+        <Route path={paths.addContractor} element={<AddContractorPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
       <DarkModeSwitch
         style={{ position: "fixed", top: "40px", right: "40px" }}
         checked={isDarkTheme}
