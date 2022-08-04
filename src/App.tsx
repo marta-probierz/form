@@ -32,9 +32,9 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Routes>
-        <Route path={paths.home} element={<FormPage />} />
+        <Route path={paths.form} element={<FormPage />} />
         <Route path={paths.addContractor} element={<AddContractorPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path={paths.notFound} element={<NotFoundPage />} />
       </Routes>
       <DarkModeSwitch
         style={{ position: "fixed", top: "40px", right: "40px" }}

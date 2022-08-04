@@ -1,4 +1,5 @@
 export const paths = {
-  home: "/",
+  form: "/",
   addContractor: "Contractor/Save",
+  notFound: "*",
 };
