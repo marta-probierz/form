@@ -4,4 +4,6 @@ export default interface IInput {
   type: string;
   name: string;
   id: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

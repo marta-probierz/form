@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
-// import { Formik, Form } from "formik";
+import { Formik, Form } from "formik";
 
-import { paths } from "../../config/paths";
+import IForm from "./Form.interface";
+import { SignupSchema } from "./validate";
+// import { paths } from "../../config/paths";
 import { Button, Input, Radio } from "../../components";
 import { PageContainer } from "../../styles";
 import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img } from "./FormPage.style";
 
 export const FormPage = () => {
   const { t } = useTranslation();
+  // let navigate = useNavigate();
   const [img, setImg] = useState("");
   const [selectedType, setSelectedType] = useState<String>();
 
@@ -23,50 +26,151 @@ export const FormPage = () => {
     setImg(URL.createObjectURL(file));
   };
 
+  const initialValues: IForm = {
+    name: "",
+    lastname: "",
+    osobaFirma: "",
+    file: "",
+    pesel: "",
+    nip: "",
+  };
+
   return (
-    <PageContainer>
-      <FormContainer>
-        <Input for="name" label={t`form.input.name`} type="text" name="name" id="name" />
-        <Input for="lastname" label={t`form.input.lastname`} type="text" name="lastname" id="lastname" />
+    <Formik
+      initialValues={initialValues}
+      validationSchema={SignupSchema()}
+      onSubmit={(values: IForm) => {
+        let data = {
+          name: values.name,
+          lastname: values.lastname,
+          osobaFirma: values.osobaFirma,
+          file: values.file,
+          pesel: values.pesel,
+          nip: values.nip,
+        };
+        const url = `https://localhost:60001/Contractor/Save`;
+        const headers = {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        };
+        fetch(url, {
+          method: "POST",
+          headers,
+          body: JSON.stringify(data),
+        })
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            }
+            return Promise.reject(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        console.log(data);
+      }}
+    >
+      {({ values, errors, touched, handleChange, handleSubmit, isValid }) => (
+        <Form onSubmit={handleSubmit}>
+          <PageContainer>
+            <FormContainer>
+              <Input
+                for="name"
+                label={t`form.input.name`}
+                type="text"
+                name="name"
+                id="name"
+                value={values.name}
+                onChange={handleChange}
+              />
 
-        <RadioContainer>
-          <Radio
-            for="osoba"
-            label={t`form.input.osoba`}
-            type="radio"
-            name="osobaFirma"
-            id="osoba"
-            value="osoba"
-            onChange={radioHandler}
-          />
-          <Radio
-            for="firma"
-            label={t`form.input.firma`}
-            type="radio"
-            name="osobaFirma"
-            id="firma"
-            value="firma"
-            onChange={radioHandler}
-          />
-        </RadioContainer>
+              <Input
+                for="lastname"
+                label={t`form.input.lastname`}
+                type="text"
+                name="lastname"
+                id="lastname"
+                value={values.lastname}
+                onChange={handleChange}
+              />
 
-        {selectedType === "osoba" ? (
-          <Input for="peselNip" label={t`form.input.pesel`} type="number" name="peselNip" id="peselNip" />
-        ) : selectedType === "firma" ? (
-          <Input for="peselNip" label={t`form.input.nip`} type="number" name="peselNip" id="peselNip" />
-        ) : (
-          <Input for="peselNip" label={t`form.input.peselnip`} type="number" name="peselNip" id="peselNip" />
-        )}
+              <RadioContainer>
+                <Radio
+                  for="osoba"
+                  label={t`form.input.osoba`}
+                  type="radio"
+                  name="osobaFirma"
+                  id="osoba"
+                  value="osoba"
+                  onChange={(e) => {
+                    handleChange(e);
+                    radioHandler(e);
+                  }}
+                />
 
-        <PhotoContainer>
-          {img !== "" ? <Img src={img} alt="addedPhoto" /> : null}
-          <PhotoInput type="file" onChange={onImageChange} />
-        </PhotoContainer>
+                <Radio
+                  for="firma"
+                  label={t`form.input.firma`}
+                  type="radio"
+                  name="osobaFirma"
+                  id="firma"
+                  value="firma"
+                  onChange={(e) => {
+                    handleChange(e);
+                    radioHandler(e);
+                  }}
+                />
+              </RadioContainer>
 
-        <Link to={paths.addContractor}>
-          <Button label={t`form.button`} />
-        </Link>
-      </FormContainer>
-    </PageContainer>
+              {selectedType === "osoba" ? (
+                <>
+                  <Input
+                    for="pesel"
+                    label={t`form.input.pesel`}
+                    type="text"
+                    name="pesel"
+                    id="pesel"
+                    value={values.pesel !== undefined ? values.pesel : ""}
+                    onChange={handleChange}
+                  />
+                  <h1>{errors.pesel && touched.pesel && errors.pesel}</h1>
+                </>
+              ) : selectedType === "firma" ? (
+                <>
+                  <Input
+                    for="nip"
+                    label={t`form.input.nip`}
+                    type="text"
+                    name="nip"
+                    id="nip"
+                    value={values.nip !== undefined ? values.nip : ""}
+                    onChange={handleChange}
+                  />
+                  <h1>{errors.nip && touched.nip && errors.nip}</h1>
+                </>
+              ) : null}
+
+              <PhotoContainer>
+                {img !== "" ? <Img src={img} alt="addedPhoto" /> : null}
+                <PhotoInput
+                  type="file"
+                  id="file"
+                  name="file"
+                  onChange={(e) => {
+                    handleChange(e);
+                    onImageChange(e);
+                  }}
+                  value={values.file}
+                />
+              </PhotoContainer>
+
+              {/* <Link to={paths.addContractor}> */}
+              <Button type="submit" label={t`form.button`} disabled={!isValid} />
+              {/* </Link> */}
+            </FormContainer>
+          </PageContainer>
+        </Form>
+      )}
+    </Formik>
   );
 };
