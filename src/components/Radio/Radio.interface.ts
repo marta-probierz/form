@@ -5,4 +5,5 @@ export default interface IRadio {
   name: string;
   id: string;
   value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
