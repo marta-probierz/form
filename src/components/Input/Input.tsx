@@ -7,7 +7,14 @@ export const Input = (props: IInput) => {
   return (
     <InputContainer>
       <InputLabel htmlFor={props.for}>{props.label}</InputLabel>
-      <Int type={props.type} name={props.name} id={props.id} value={props.value} onChange={props.onChange}></Int>
+      <Int
+        type={props.type}
+        name={props.name}
+        id={props.id}
+        value={props.value}
+        onChange={props.onChange}
+        className={props.className}
+      />
     </InputContainer>
   );
 };
