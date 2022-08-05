@@ -1,5 +1,14 @@
 {
-  "home": {
-    "button": "zapisz"
+  "form": {
+    "button": "zapisz",
+    "input": {
+      "name": "Imię",
+      "lastname": "Nazwisko",
+      "osoba": "Osoba",
+      "firma": "Firma",
+      "pesel": "PESEL",
+      "nip": "NIP",
+      "peselnip": "PESEL / NIP"
+    }
   }
 }

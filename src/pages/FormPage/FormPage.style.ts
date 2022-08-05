@@ -14,6 +14,22 @@ export const RadioContainer = styled.form`
   display: flex;
 `;
 
+export const PhotoContainer = styled.div`
+  margin: 1rem 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${(props) => props.theme.fontColor};
+  padding: 12px 16px;
+  width: 25rem;
+`;
+
+export const PhotoInput = styled.input`
+  cursor: pointer;
+  font-size: 18px;
+  width: 17rem;
+`;
+
 export const Img = styled.img`
   aspect-ratio: 1 / 1;
   width: 6rem;

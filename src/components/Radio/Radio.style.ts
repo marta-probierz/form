@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const RadioContainer = styled.div`
   width: 5rem;
-  margin: 1.5rem 1.5rem 0;
+  margin: 1.5rem 1.5rem .5rem;
 `;
 
 export const RadioLabel = styled.label`
