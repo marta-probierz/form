@@ -70,7 +70,7 @@ export const FormPage = () => {
         console.log(data);
       }}
     >
-      {({ values, errors, touched, handleChange, handleSubmit, isValid }) => (
+      {({ values, errors, touched, handleChange, handleSubmit }) => (
         <Form onSubmit={handleSubmit}>
           <PageContainer>
             <FormContainer>
@@ -169,7 +169,7 @@ export const FormPage = () => {
               </PhotoContainer>
 
               {/* <Link to={paths.addContractor}> */}
-              <Button type="submit" label={t`form.button`} disabled={isValid} />
+              <Button type="submit" label={t`form.button`} />
               {/* </Link> */}
             </FormContainer>
           </PageContainer>

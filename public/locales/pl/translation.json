@@ -14,5 +14,12 @@
     "404": "404",
     "notfound": "Strona nie została znaleziona",
     "button": "wróć"
+  },
+  "validate": {
+    "numbers": "Wpisz wyłącznie cyfry",
+    "pesel": "Wpisz dokładnie 11 cyfr",
+    "peselformat": "Nieprawidłowy numer PESEL",
+    "nip": "Wpisz dokładnie 10 cyfr",
+    "nipformat": "Nieprawidłowy numer NIP"
   }
 }
