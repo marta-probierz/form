@@ -10,5 +10,10 @@
       "nip": "NIP",
       "peselnip": "PESEL / NIP"
     }
+  },
+  "notfound": {
+    "404": "404",
+    "notfound": "Strona nie została znaleziona",
+    "button": "wróć"
   }
 }
