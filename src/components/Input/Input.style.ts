@@ -25,4 +25,8 @@ export const Int = styled.input`
   &:focus {
     outline: none;
   }
+  &.invalid {
+    border: 1px solid #222222;
+    box-shadow: 0px 0px 0px 2px #a3270c;
+  }
 `;

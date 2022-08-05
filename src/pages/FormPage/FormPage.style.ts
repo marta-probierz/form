@@ -36,3 +36,10 @@ export const Img = styled.img`
   heigth: 6rem;
   margin-right: 1rem;
 `;
+
+export const ErrorMsg = styled.div`
+  color: ${({ theme }) => theme.colors.warning || "#FF0000"};
+  align-self: flex-start;
+  font-size: 14px;
+  margin: -10px 0 0 12px;
+`;

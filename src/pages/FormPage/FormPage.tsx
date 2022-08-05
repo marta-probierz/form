@@ -8,8 +8,8 @@ import IForm from "./Form.interface";
 import { SignupSchema } from "./validate";
 // import { paths } from "../../config/paths";
 import { Button, Input, Radio } from "../../components";
-import { PageContainer } from "../../styles";
-import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img } from "./FormPage.style";
+import { PageContainer, WarningIcon } from "../../styles";
+import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img, ErrorMsg } from "./FormPage.style";
 
 export const FormPage = () => {
   const { t } = useTranslation();
@@ -132,8 +132,10 @@ export const FormPage = () => {
                     id="pesel"
                     value={values.pesel !== undefined ? values.pesel : ""}
                     onChange={handleChange}
+                    className={errors.pesel && touched.pesel ? "invalid" : ""}
                   />
-                  <h1>{errors.pesel && touched.pesel && errors.pesel}</h1>
+                  <WarningIcon className={errors.pesel && touched.pesel ? "invalid" : ""} />
+                  <ErrorMsg>{errors.pesel && touched.pesel && errors.pesel}</ErrorMsg>
                 </>
               ) : selectedType === "firma" ? (
                 <>
@@ -145,8 +147,10 @@ export const FormPage = () => {
                     id="nip"
                     value={values.nip !== undefined ? values.nip : ""}
                     onChange={handleChange}
+                    className={errors.nip && touched.nip ? "invalid" : ""}
                   />
-                  <h1>{errors.nip && touched.nip && errors.nip}</h1>
+                  <WarningIcon className={errors.nip && touched.nip ? "invalid" : ""} />
+                  <ErrorMsg>{errors.nip && touched.nip && errors.nip}</ErrorMsg>
                 </>
               ) : null}
 
@@ -165,7 +169,7 @@ export const FormPage = () => {
               </PhotoContainer>
 
               {/* <Link to={paths.addContractor}> */}
-              <Button type="submit" label={t`form.button`} disabled={!isValid} />
+              <Button type="submit" label={t`form.button`} disabled={isValid} />
               {/* </Link> */}
             </FormContainer>
           </PageContainer>
