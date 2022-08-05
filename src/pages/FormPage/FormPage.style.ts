@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const FormContainer = styled.form`
   background-color: ${(props) => props.theme.background};
 `;
 
-export const RadioContainer = styled.form`
+export const RadioContainer = styled.div`
   display: flex;
 `;
 

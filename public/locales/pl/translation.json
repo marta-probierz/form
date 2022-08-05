@@ -7,8 +7,7 @@
       "osoba": "Osoba",
       "firma": "Firma",
       "pesel": "PESEL",
-      "nip": "NIP",
-      "peselnip": "PESEL / NIP"
+      "nip": "NIP"
     }
   },
   "notfound": {
