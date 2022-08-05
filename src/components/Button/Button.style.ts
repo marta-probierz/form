@@ -6,7 +6,7 @@ export const ButtonStyle = styled.button`
   border: 1px solid ${(props) => props.theme.fontColor};
   font-size: 1.5rem;
   text-decoration: none;
-  color: ${(props) => props.theme.fontColor};
+  color: #000;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 6px;
