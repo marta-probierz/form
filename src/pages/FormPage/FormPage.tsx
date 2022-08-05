@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 // import { Formik, Form } from "formik";
 
@@ -62,7 +63,9 @@ export const FormPage = () => {
           <PhotoInput type="file" onChange={onImageChange} />
         </PhotoContainer>
 
-        <Button url={paths.addContractor} label={t`form.button`} />
+        <Link to={paths.addContractor}>
+          <Button label={t`form.button`} />
+        </Link>
       </FormContainer>
     </PageContainer>
   );
