@@ -7,6 +7,7 @@ export const PageContainer = styled.div`
   align-items: center;
   gap: 16px;
   width: 100vw;
+  height: 100vh;
   color: ${(props) => props.theme.fontColor};
 `;
 

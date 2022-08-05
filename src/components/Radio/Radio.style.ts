@@ -1,27 +1,26 @@
 import styled from "styled-components";
 
-export const InputContainer = styled.div`
-  width: 25rem;
-  margin: 1rem;
+export const RadioContainer = styled.div`
+  width: 5rem;
+  margin: 1.5rem 1.5rem 0;
 `;
 
-export const InputLabel = styled.label`
-  align-self: flex-start;
+export const RadioLabel = styled.label`
+  position: relative;
+  bottom: 0.5rem;
+  left: 5px;
   font-weight: 500;
   font-size: 18px;
   color: ${(props) => props.theme.fontColor};
 `;
 
-export const Int = styled.input`
-  align-self: flex-start;
-  margin-top: 3px;
-  padding: 12px 16px;
-  width: 100%;
-  height: 48px;
+export const Rdo = styled.input`
   background: ${(props) => props.theme.background};
-  font-size: 18px;
   color: ${(props) => props.theme.fontColor};
   border: 1px solid ${(props) => props.theme.fontColor};
+  cursor: pointer;
+  width: 30%;
+  height: 2rem;
   &:focus {
     outline: none;
   }
