@@ -37,7 +37,7 @@ function App() {
         <Route path={paths.notFound} element={<NotFoundPage />} />
       </Routes>
       <DarkModeSwitch
-        style={{ position: "fixed", top: "40px", right: "40px" }}
+        style={{ position: "absolute", top: "40px", right: "40px" }}
         checked={isDarkTheme}
         onChange={() => themeToggler()}
         size={45}

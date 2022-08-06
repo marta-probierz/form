@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const InputContainer = styled.div`
   width: 25rem;
   margin: 1rem;
+  @media (max-width: 600px) {
+    width: 17rem;
+    margin: .5rem;
+  }
 `;
 
 export const InputLabel = styled.label`
