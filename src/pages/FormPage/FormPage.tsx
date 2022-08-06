@@ -9,7 +9,7 @@ import { SignupSchema } from "./validate";
 import { addcontractor } from "../../service/addContractor";
 import { paths } from "../../config/paths";
 import { Button, Input, Radio } from "../../components";
-import { PageContainer, WarningIcon, Toast } from "../../styles";
+import { PageContainer, Toast } from "../../styles";
 import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img, ErrorMsg, ErrorRadio } from "./FormPage.style";
 
 export const FormPage = () => {
@@ -124,7 +124,6 @@ export const FormPage = () => {
                     onChange={handleChange}
                     className={errors.pesel && touched.pesel ? "invalid" : ""}
                   />
-                  <WarningIcon className={errors.pesel && touched.pesel ? "invalid" : ""} />
                   <ErrorMsg>{errors.pesel && touched.pesel && errors.pesel}</ErrorMsg>
                 </>
               ) : selectedType === "firma" ? (
@@ -139,7 +138,6 @@ export const FormPage = () => {
                     onChange={handleChange}
                     className={errors.nip && touched.nip ? "invalid" : ""}
                   />
-                  <WarningIcon className={errors.nip && touched.nip ? "invalid" : ""} />
                   <ErrorMsg>{errors.nip && touched.nip && errors.nip}</ErrorMsg>
                 </>
               ) : null}
