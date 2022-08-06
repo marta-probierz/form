@@ -8957,11 +8957,6 @@ v8-to-istanbul@^8.1.0:
     convert-source-map "^1.6.0"
     source-map "^0.7.3"
 
-validate-polish@^2.0.40:
-  version "2.0.40"
-  resolved "https://registry.yarnpkg.com/validate-polish/-/validate-polish-2.0.40.tgz#196a2c2587d9cc84d951ae43e28f7bbdefa121f2"
-  integrity sha512-4EyLpjLHtvn4qDLUOpF8CBwbYsncZt7vAJAscRL+h/oECxGlLtxSLk6lOmOduLxZ7JsAxOuDrbqOnFqQVXHcYw==
-
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
