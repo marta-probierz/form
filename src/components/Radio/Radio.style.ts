@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const RadioContainer = styled.div`
   width: 5rem;
-  margin: 1.5rem 1.5rem .5rem;
+  margin: 1.5rem 1.5rem 0.5rem;
 `;
 
 export const RadioLabel = styled.label`
@@ -23,5 +23,8 @@ export const Rdo = styled.input`
   height: 2rem;
   &:focus {
     outline: none;
+  }
+  &.invalid {
+    box-shadow: 0 3px 0 -1px #a3270c;
   }
 `;

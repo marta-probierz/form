@@ -16,6 +16,7 @@
     "button": "wróć"
   },
   "validate": {
+    "osobafirma": "Wybierz osobę lub firmę",
     "numbers": "Wpisz wyłącznie cyfry",
     "pesel": "Wpisz dokładnie 11 cyfr",
     "peselformat": "Nieprawidłowy numer PESEL",

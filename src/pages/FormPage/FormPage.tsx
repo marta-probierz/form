@@ -9,7 +9,7 @@ import { SignupSchema } from "./validate";
 // import { paths } from "../../config/paths";
 import { Button, Input, Radio } from "../../components";
 import { PageContainer, WarningIcon } from "../../styles";
-import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img, ErrorMsg } from "./FormPage.style";
+import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img, ErrorMsg, ErrorRadio } from "./FormPage.style";
 
 export const FormPage = () => {
   const { t } = useTranslation();
@@ -106,6 +106,7 @@ export const FormPage = () => {
                     handleChange(e);
                     radioHandler(e);
                   }}
+                  className={errors.osobaFirma && touched.osobaFirma ? "invalid" : ""}
                 />
 
                 <Radio
@@ -119,8 +120,10 @@ export const FormPage = () => {
                     handleChange(e);
                     radioHandler(e);
                   }}
+                  className={errors.osobaFirma && touched.osobaFirma ? "invalid" : ""}
                 />
               </RadioContainer>
+              <ErrorRadio>{errors.osobaFirma && touched.osobaFirma && errors.osobaFirma}</ErrorRadio>
 
               {selectedType === "osoba" ? (
                 <>

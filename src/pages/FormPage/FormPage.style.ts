@@ -43,3 +43,9 @@ export const ErrorMsg = styled.div`
   font-size: 14px;
   margin: -10px 0 0 12px;
 `;
+
+export const ErrorRadio = styled.div`
+  color: ${({ theme }) => theme.colors.warning || "#FF0000"};
+  font-size: 14px;
+  margin: 0 15px 0 12px;
+`;
