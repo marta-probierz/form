@@ -13,7 +13,7 @@
   "notfound": {
     "404": "404",
     "notfound": "Strona nie została znaleziona",
-    "button": "wróć"
+    "button": "Wróć"
   },
   "validate": {
     "osobafirma": "Wybierz osobę lub firmę",
@@ -26,5 +26,8 @@
   "toast": {
     "success": "Twoje dane zostały zapisane",
     "error": "Nie znaleziono metody zapisu"
+  },
+  "addcontractor": {
+    "button": "Wróć"
   }
 }
