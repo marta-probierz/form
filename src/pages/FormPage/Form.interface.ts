@@ -3,6 +3,6 @@ export default interface IForm {
   lastname: string;
   osobaFirma: string;
   file: string;
-  pesel?: string;
-  nip?: string;
+  pesel: string;
+  nip: string;
 }

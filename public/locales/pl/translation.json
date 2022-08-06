@@ -22,5 +22,9 @@
     "peselformat": "Nieprawidłowy numer PESEL",
     "nip": "Wpisz dokładnie 10 cyfr",
     "nipformat": "Nieprawidłowy numer NIP"
+  },
+  "toast": {
+    "success": "Twoje dane zostały zapisane",
+    "error": "Nie znaleziono metody zapisu"
   }
 }

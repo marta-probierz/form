@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-// import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
+import { toast } from "react-toastify";
 
 import IForm from "./Form.interface";
 import { SignupSchema } from "./validate";
-// import { paths } from "../../config/paths";
+import { addcontractor } from "../../service/addContractor";
+import { paths } from "../../config/paths";
 import { Button, Input, Radio } from "../../components";
-import { PageContainer, WarningIcon } from "../../styles";
+import { PageContainer, WarningIcon, Toast } from "../../styles";
 import { FormContainer, RadioContainer, PhotoContainer, PhotoInput, Img, ErrorMsg, ErrorRadio } from "./FormPage.style";
 
 export const FormPage = () => {
   const { t } = useTranslation();
-  // let navigate = useNavigate();
+  const navigate = useNavigate();
   const [img, setImg] = useState("");
   const [selectedType, setSelectedType] = useState<String>();
 
@@ -39,35 +40,21 @@ export const FormPage = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={SignupSchema()}
-      onSubmit={(values: IForm) => {
-        let data = {
-          name: values.name,
-          lastname: values.lastname,
-          osobaFirma: values.osobaFirma,
-          file: values.file,
-          pesel: values.pesel,
-          nip: values.nip,
-        };
-        const url = `https://localhost:60001/Contractor/Save`;
-        const headers = {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        };
-        fetch(url, {
-          method: "POST",
-          headers,
-          body: JSON.stringify(data),
-        })
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            }
-            return Promise.reject(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-        console.log(data);
+      onSubmit={({ name, lastname, osobaFirma, file, pesel, nip }: IForm) => {
+        addcontractor(name, lastname, osobaFirma, file, pesel, nip).then(
+          () => {
+            setTimeout(() => {
+              navigate(paths.addContractor, { replace: true });
+            }, 3000);
+            toast.success(t`toast.success`);
+          },
+          ({ response }) => {
+            setTimeout(() => {
+              navigate(paths.addContractor, { replace: true });
+            }, 3000);
+            toast.error(t`toast.error`);
+          },
+        );
       }}
     >
       {({ values, errors, touched, handleChange, handleSubmit }) => (
@@ -171,9 +158,8 @@ export const FormPage = () => {
                 />
               </PhotoContainer>
 
-              {/* <Link to={paths.addContractor}> */}
               <Button type="submit" label={t`form.button`} />
-              {/* </Link> */}
+              <Toast />
             </FormContainer>
           </PageContainer>
         </Form>
