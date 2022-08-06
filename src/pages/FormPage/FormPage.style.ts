@@ -8,6 +8,10 @@ export const FormContainer = styled.div`
   width: 496px;
   padding: 20px 40px;
   background-color: ${(props) => props.theme.background};
+  @media (max-width: 600px) {
+    width: 90%;
+    padding: 75px 40px;
+  }
 `;
 
 export const RadioContainer = styled.div`
@@ -22,6 +26,10 @@ export const PhotoContainer = styled.div`
   border: 1px solid ${(props) => props.theme.fontColor};
   padding: 12px 16px;
   width: 25rem;
+  @media (max-width: 600px) {
+    width: 17rem;
+    margin: 2rem;
+  }
 `;
 
 export const PhotoInput = styled.input`
@@ -32,9 +40,9 @@ export const PhotoInput = styled.input`
 
 export const Img = styled.img`
   aspect-ratio: 1 / 1;
-  width: 6rem;
-  heigth: 6rem;
-  margin-right: 1rem;
+  width: 100px;
+  heigth: 100px;
+  margin-right: 1.5rem;
 `;
 
 export const ErrorMsg = styled.div`
@@ -42,6 +50,9 @@ export const ErrorMsg = styled.div`
   align-self: flex-start;
   font-size: 14px;
   margin: -10px 0 0 12px;
+  @media (max-width: 600px) {
+    margin: 0 0 0 7px;
+  }
 `;
 
 export const ErrorRadio = styled.div`
