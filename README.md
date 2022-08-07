@@ -25,7 +25,7 @@ Zawiera on funkcję przełączania na dark bądź light mode.
 #### - Formularz
 
 Główna część aplikacji to formularz. Znajduje się w nim kilka pól, między innymi: imię, nazwisko, przyciski wyboru, dzięki którym użytkownik może wybrać czy jest osobą czy firmą (po kliknięciu na „Osoba” pojawi się dodatkowe pole „PESEL”, z kolei po kliknięciu „Firma” - „NIP”), a także pole pozwalające na wgranie zdjęcia z dysku. 
-![Zrzut ekranu 2022-08-07 o 13 28 32](https://user-images.githubusercontent.com/75137091/183288778-2986ada6-867e-44d0-b89f-faa3bbee9bd1.png)
+![Zrzut ekranu 2022-08-07 o 17 52 42](https://user-images.githubusercontent.com/75137091/183299582-bd6b2af0-37cb-4ad0-8c7b-f30401b8a557.png)
 
 
 #### Walidacja
@@ -43,7 +43,7 @@ W przypadku niedokonania wyboru lub wpisania niepoprawnych danych, użytkownik z
 ### Strona Add Contractor
 
 Po wpisaniu danych zostanie wyświetlony komunikat o pozytywnym lub negatywnym zapisie, po czym użytkownik zostaje przeniesiony na stronę Add Contractor. Znajduje się na niej przycisk, kliknięcie którego przeniesie użytkownika na stronę formularza.
-![Zrzut ekranu 2022-08-07 o 13 32 07](https://user-images.githubusercontent.com/75137091/183288738-c03ceb91-98e6-44ea-817f-6a56527a4742.png)
+![Zrzut ekranu 2022-08-07 o 17 53 25](https://user-images.githubusercontent.com/75137091/183299617-323c3752-57ed-4563-a0f2-0d481682f720.png)
 ![Zrzut ekranu 2022-08-07 o 13 32 13](https://user-images.githubusercontent.com/75137091/183288750-1ba37b8c-2de5-4c49-aa03-6b1932f78abb.png)
 
 
@@ -56,13 +56,13 @@ Dodatkowo została przygotowana strona Not Found. W przypadku wpisania błędneg
 ## Responsywność
 W projekcie została zrealizowana responsywność stron.
 <div align="center">
-  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183289496-25cfcd59-f190-4759-b5a9-5496e46322d3.jpg">
-  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183289501-96a270a0-1790-40fd-96e9-bf0eda3de168.jpg">
-  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183289506-b87f1c34-1cfb-4d08-8237-91a4fafed6d3.jpg">
+  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183299327-100f1259-fff8-4226-beba-beed92d2ebfb.jpg">
+  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183299331-72539841-8601-4982-89aa-52a6be5a9936.jpg">
+  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183299333-75f965c5-99c1-48c4-bb3c-2d28c0dfb78b.jpg">
   <br>
-  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183289509-7bbf1416-c06a-48cc-93e7-00ae9b515ac2.jpg">
-  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183289514-8d7ff936-0149-4650-8dd2-97bf194825eb.jpg">
-  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183289517-42dc9074-c581-48cf-8b2e-1b9584971abb.jpg">
+  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183299337-6e5d96ae-13de-4617-a576-ffd2cbe6830b.jpg">
+  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183299341-c211d56c-be46-40c9-9565-5651dca4bf78.jpg">
+  <img height="500px" src="https://user-images.githubusercontent.com/75137091/183299345-6e93731d-0d76-4fef-947a-8e853641390a.jpg">
 </div>
 
 ## Dodatkowe informacje
