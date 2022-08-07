@@ -34,7 +34,7 @@ W formularzu została przeprowadzona walidacja.
 ![Zrzut ekranu 2022-08-07 o 13 27 29](https://user-images.githubusercontent.com/75137091/183288826-91880124-3f6d-4eec-afb7-7bd222af22c5.png)
 
 - Pola PESEL oraz NIP posiadają walidację możliwości wpisania wyłącznie cyfr, prawidłowej długości danego numeru (PESEL - 11 cyfr, NIP - 10 cyfr), a także ogólnej poprawności wprowadzonych danych (zostały zastosowane funkcje, w których zostały zadeklarowane odpowiednie wagi cyfr, zmienna sumująca, działanie odejmowania lub dzielenia oraz przypisanie do zmiennej ostatniej cyfry, która jest cyfrą kontrolną).
-W przypadku niedokonania wyboru lub wpisania niepoprawnych danych, użytkownik zauważy odpowiednie komunikaty pod danym polem.
+W przypadku wpisania niepoprawnych danych, użytkownik zauważy odpowiednie komunikaty pod danym polem.
 ![Zrzut ekranu 2022-08-07 o 13 29 17](https://user-images.githubusercontent.com/75137091/183288885-7769db69-5952-4431-a7b5-05145c0a048f.png)
 ![Zrzut ekranu 2022-08-07 o 13 29 29](https://user-images.githubusercontent.com/75137091/183288891-64adeca7-5e1a-4ac3-aa19-2a29745676e8.png)
 ![Zrzut ekranu 2022-08-07 o 13 29 33](https://user-images.githubusercontent.com/75137091/183288894-9a43375a-d725-4ed0-b9af-9063d2af3693.png)
