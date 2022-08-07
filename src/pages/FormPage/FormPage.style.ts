@@ -35,7 +35,7 @@ export const PhotoContainer = styled.div`
 export const PhotoInput = styled.input`
   cursor: pointer;
   font-size: 15px;
-  width: 14rem;
+  width: 10rem;
 `;
 
 export const Img = styled.img`
@@ -45,6 +45,10 @@ export const Img = styled.img`
   margin-right: 1.5rem;
   margin-left: 1rem;
   object-fit: cover;
+  @media (max-width: 600px) {
+    width: 50px;
+    heigth: 50px;
+  }
 `;
 
 export const ErrorMsg = styled.div`
