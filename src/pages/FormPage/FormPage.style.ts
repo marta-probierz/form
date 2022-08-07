@@ -43,8 +43,8 @@ export const PhotoInput = styled.input`
 
 export const Img = styled.img`
   aspect-ratio: 1 / 1;
-  width: 100px;
-  heigth: 100px;
+  width: 80px;
+  heigth: 80px;
   margin-right: 1.5rem;
   margin-left: 1rem;
   object-fit: cover;
