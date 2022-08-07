@@ -153,6 +153,7 @@ export const FormPage = () => {
                     onImageChange(e);
                   }}
                   value={values.file}
+                  accept="image/jpg, image/jpeg"
                 />
               </PhotoContainer>
 
