@@ -43,6 +43,8 @@ export const Img = styled.img`
   width: 100px;
   heigth: 100px;
   margin-right: 1.5rem;
+  margin-left: 1rem;
+  object-fit: cover;
 `;
 
 export const ErrorMsg = styled.div`
