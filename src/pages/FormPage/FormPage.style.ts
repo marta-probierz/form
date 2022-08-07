@@ -35,7 +35,10 @@ export const PhotoContainer = styled.div`
 export const PhotoInput = styled.input`
   cursor: pointer;
   font-size: 15px;
-  width: 10rem;
+  width: 16rem;
+  @media (max-width: 600px) {
+    width: 10rem;
+  }
 `;
 
 export const Img = styled.img`
